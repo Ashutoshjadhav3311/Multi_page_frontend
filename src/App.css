@@ -2,59 +2,19 @@
   text-align: center;
 }
 body {
-  padding: 1%;
-  background: linear-gradient(to bottom, #fbf6f5 0%, #fdf0ed 100%);
-}
-.App .dchat {
+  background: linear-gradient(90deg, #300031 0%, #00146b 100%);
+
+  /*background: rgb(49, 38, 226);
   background: linear-gradient(
-    to bottom,
-    hsl(192, 76%, 87%) 0%,
-    #ffffff 50%,
-    hsl(192, 86%, 92%) 100%
-  );
-  color: #28b8f1;
-  font-size: 140%;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  padding-top: 1.5%;
-  width: 100%;
-  height: 160px;
-  border-radius: 25px;
-}
-.App-logo {
-  height: 40vmin;
-  color: #61dafb;
-  pointer-events: none;
-}
+    90deg,
+    rgba(49, 38, 226, 1) 0%,
+    rgba(247, 183, 183, 1) 50%,
+    rgba(26, 41, 195, 1) 100%
+  );*/
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  /* background: linear-gradient(to bottom, hsl(0, 27%, 90%) 0%, #f3e9e9 100%);/*
-  /*background-color: #e9b6b6;*/
-  min-height: 150vh;
-  display: grid;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  /*color: rgb(68, 28, 28); */
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  font: 14px/20px "Lato", Arial, sans-serif;
+  padding: 40px 0;
+  color: rgb(255, 255, 255);
 }
 .wrapper {
   display: grid;
@@ -63,19 +23,31 @@ body {
   grid-auto-rows: minmax(100px, auto);
 }
 .one {
-  padding-top: 7%;
+  padding-top: 6%;
   padding-left: 2%;
   padding-right: 2%;
-  border-radius: 25px;
-  background: linear-gradient(to bottom, #e2e2e2 0%, #f5f5f7 100%);
+  border-radius: 19px;
+  background: linear-gradient(to bottom, #f5f5f5 0%, #cbeccb 100%);
   grid-column: 1;
   grid-row: 1;
 }
 .two {
+  padding-top: 4%;
+  padding-bottom: 4%;
+  padding-left: 2%;
+  padding-right: 2%;
+  border-radius: 19px;
+  background: linear-gradient(to bottom, #f5f5f5 0%, #cbeccb 100%);
   grid-column: 2 / 4;
   grid-row: 1 / 5;
 }
 .three {
+  padding-top: 4%;
+  padding-bottom: 4%;
+  padding-left: 2%;
+  padding-right: 2%;
+  border-radius: 19px;
+  background: linear-gradient(to bottom, #f5f5f5 0%, #cbeccb 100%);
   grid-column: 1;
   grid-row: 2 / 5;
 }
