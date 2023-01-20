@@ -8,15 +8,20 @@ function Home() {
           <div class="col-lg-7">
             <img
               class="img-fluid rounded mb-4 mb-lg-0"
-              src="http://placehold.it/900x400"
+              src="https://www.ritavpn.com/blog/wp-content/uploads/2019/11/What-is-end-to-end-encryption.png"
               alt=""
             />
           </div>
           <div class="col-lg-5">
-            <h1 class="font-weight-light">Home page</h1>
-            <p>Dcentralized chat</p>
+            <img
+              src="https://i.ibb.co/YcCRRB6/Dmessage-logos-white.png"
+              width="250"
+              height="250"
+              alt=""
+            ></img>
+
             <p>
-              is a free, easy-to-use, encrypted messaging app for Android and
+              Is a free, easy-to-use, encrypted messaging app for Android and
               iOS. All messages are encrypted, private and 100% yours.
             </p>
             <p>Privacy by design </p>
