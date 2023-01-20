@@ -9,6 +9,7 @@ import {
   Loader,
   GridRow,
 } from "semantic-ui-react";
+import "semantic-ui-css/semantic.min.css";
 import SweetAlert from "react-bootstrap-sweetalert";
 import { format } from "date-fns";
 import "./App.css";
@@ -16,7 +17,14 @@ import UsersList from "./UserList";
 import MessageBox from "./MessageBox";
 
 const configuration = {
-  iceServers: [{ url: "stun:stun.1.google.com:19302" }],
+  iceServers: [
+    { url: "stun:stun.1.google.com:19302" }, //stun server
+    {
+      url: "turn:turn.anyfirewall.com:443?transport=tcp",
+      credential: "webrtc",
+      username: "webrtc",
+    }, //turn server
+  ],
 };
 const Chat = ({ connection, updateConnection, channel, updateChannel }) => {
   const [socketOpen, setSocketOpen] = useState(false);
@@ -34,7 +42,7 @@ const Chat = ({ connection, updateConnection, channel, updateChannel }) => {
   const messagesRef = useRef({});
   const [messages, setMessages] = useState({});
   useEffect(() => {
-    webSocket.current = new WebSocket("ws://localhost:9000"); // for local ws://localhost:9000 for cloud wss://smessage3311.herokuapp.com"
+    webSocket.current = new WebSocket("wss://server-qh5h.onrender.com/"); // for local ws://localhost:9000 for cloud wss://smessage3311.herokuapp.com"
     webSocket.current.onmessage = message => {
       const data = JSON.parse(message.data);
       setSocketMessages(prev => [...prev, data]);
@@ -281,7 +289,6 @@ const Chat = ({ connection, updateConnection, channel, updateChannel }) => {
                   >
                     <input />
                     <Button
-                      inverted
                       animated
                       color="blue"
                       disabled={!name || loggingIn}
@@ -296,7 +303,7 @@ const Chat = ({ connection, updateConnection, channel, updateChannel }) => {
                     </Button>
                   </Input>
                 )) || (
-                  <Segment raised textAlign="center" color="blue">
+                  <Segment raised textAlign="center">
                     Logged In as: {name}
                   </Segment>
                 )}{" "}
