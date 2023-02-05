@@ -19,11 +19,7 @@ import MessageBox from "./MessageBox";
 const configuration = {
   iceServers: [
     { url: "stun:stun.1.google.com:19302" }, //stun server
-    {
-      url: "turn:turn.anyfirewall.com:443?transport=tcp",
-      credential: "webrtc",
-      username: "webrtc",
-    }, //turn server
+    
   ],
 };
 const Chat = ({ connection, updateConnection, channel, updateChannel }) => {
